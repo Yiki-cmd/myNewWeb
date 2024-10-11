@@ -1,0 +1,241 @@
+:root{
+   
+    --color-primary: #ff7b02;
+    --color-primary-variant: #e5a55d;
+    --color-bg-1: #000e17;
+    --color-bg-2: #001e2d;
+    --color-bg-3: #012734;
+    --color-bg-4: #003347;
+    --color-light: #85a2b2;
+    --color-white: hsl(0, 0%, 90%);
+    --transition: all 350ms ease;
+    --color-gray-200: #dad7cd;
+    --color-gray-400: #1a374d;
+    --button-clr:#3498db;
+    --button-bg:#4badef;
+    --button-cr-cr: #4CAF50;
+    --button-cr-bg: #45a049;
+    --color-gray-0: #fff;
+    --color-gray-300: #32423c;
+    --card-h3:#333;
+    --card-p:#777;
+
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+   text-decoration: none;
+   list-style-type: none;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');
+
+body{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.nav_container{
+    background-color: var(--color-bg-3);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+   
+   
+}
+
+
+#haumberger{
+   width: 15px;
+   height: 15px;
+}
+.logo{
+    color: var(--color-white);
+   font-size: 24px;
+   font-weight: bold;
+}
+.logo:hover{
+    color:var(--color-primary)
+}
+.nav_menu{
+    display: flex;
+}
+ul li{
+    margin-left: 30px;
+}
+ul li a {
+    color: var(--color-white);
+    font-size: 20px;
+    padding: 5px 15px;
+    transition: transform 0,3s;
+    
+}
+ul li a:hover{
+    background-color: var(--color-gray-300);
+
+}
+
+.nav_container button{
+    background: transparent;
+    color: var(--color-gray-0);
+    font-size: 1.8rem;
+    display: none;
+}
+
+/*-----------------Main Header------------*/
+.main_header{
+    text-align: center;
+    padding: 50px 20px;
+    background-color: var(--color-gray-400);
+    color: var(--color-white);
+}
+.main_header h1{
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 30px;
+}
+.main_header h2{
+    font-size: 1rem;
+    font-weight: lighter;
+    margin-top: 10px;
+}
+
+/*---------------Gallery-----------------*/
+.gallery{
+    display: flex;
+    flex-wrap: wrap;
+    gap:10px;
+    margin-top: 30px;
+}
+.gallery img{
+    width: 1024px;
+    height: auto;
+    max-width: calc(33.333%-10px);
+    transition: var(--transition);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    filter: saturate(1);
+}
+.gallery img:hover{
+    transform: scale(1.070);
+    filter: saturate(2);
+}
+
+/*-------------------Footer---------------*/
+.main-footer{
+    text-align: center;
+    padding: 50px 30px;
+    background-color: var(--color-bg-4);
+    color: var(--color-white);
+    margin-top: 20px;
+    clear: both;
+
+}
+
+/*----------------Services Page-------------*/
+
+.card{
+    
+}
+
+
+
+
+
+
+/*----------------Contact Us-----------------*/
+.contact-form{
+    max-width: 400px;
+    margin: 30px auto 0;
+    padding: 20px;
+    background-color: var(--color-gray-0);
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.contact-form label{
+    display: block;
+    margin-bottom: 5px;
+}
+
+.contact-form input,
+.contact-form textarea{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid var(--color-gray-200);
+    border-radius: 3px;
+}
+
+.contact-form button{
+    width: 100%;
+    padding: 10px;
+    background-color: var(--button-cr-cr);
+    color: var(--color-gray-0);
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    
+}
+
+.contact-form button:hover{
+    background-color: var(--button-cr-bg);
+   
+}
+
+
+/*-------------------Register-----------------*/
+
+.register-form{
+    max-width: 400px;
+    margin: 30px auto 0;
+    padding: 20px;
+    background-color: var(--color-gray-0);
+    border-radius: 5px;
+
+}
+
+.register-form label{
+    width: 100%;
+    padding: 10px;
+
+}
+.register-form input{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid var(--color-gray-200);
+    border-radius: 3px;
+}
+
+.register-form button{
+    width: 100%;
+    padding: 10px;
+    background-color: var(--button-cr-cr);
+    color: var(--color-gray-0);
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.register-form button:hover{
+    background-color: var(--button-cr-bg);
+    transition: 0,4s;
+}
+
+
+
+/*-------------------Media-----------------------*/
+
+@media(max-width:768px){
+    .gallery img{
+        max-width: calc(50%-10px);
+        filter: saturate(1);
+    }
+    .nav_menu{
+        position: fixed;
+        right: 0;
+        top: 4rem;
+    }
+}
