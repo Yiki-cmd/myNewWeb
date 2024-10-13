@@ -42,6 +42,12 @@ body{
     justify-content: space-between;
     align-items: center;
     padding: 1.5rem;
+    position: fixed;
+    top: 0;
+    left:0;
+    z-index: 9;
+    width:100%;
+    cursor:pointer;
    
    
 }
@@ -73,6 +79,7 @@ ul li a {
     
 }
 ul li a:hover{
+    color: var(--color-primary);
     background-color: var(--color-gray-300);
 
 }
@@ -82,6 +89,7 @@ ul li a:hover{
     color: var(--color-gray-0);
     font-size: 1.8rem;
     display: none;
+    border: 0;
 }
 
 /*-----------------Main Header------------*/
@@ -119,7 +127,7 @@ ul li a:hover{
 }
 .gallery img:hover{
     transform: scale(1.070);
-    filter: saturate(2);
+    filter: saturate(1);
 }
 
 /*-------------------Footer---------------*/
@@ -135,12 +143,63 @@ ul li a:hover{
 
 /*----------------Services Page-------------*/
 
-.card{
+.card_container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 20px;
+
     
 }
 
+.card{
+    width: 860px;
+    background-color: var(--color-white);
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    transition: var(--transition);
+    border: 1px gray solid;
+    border-radius: 10px;
+    max-width: calc(50%-20px);
+    transition: var(--transition);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
 
+.card img{
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
 
+.card:hover{
+    transform: scale(1.05);
+
+}
+
+.card h3{
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: var(--card-h3);
+}
+
+.card p{
+    margin-bottom: 15px;
+    color:var(--card-p)
+
+}
+
+.buttton{
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--color-clr);
+    color: var(--color-white);
+    border-radius: 10px;
+    transition: var(--transition);
+}
+.buttton:hover{
+    background: var(--button-bg);
+}
 
 
 
@@ -193,13 +252,13 @@ ul li a:hover{
     padding: 20px;
     background-color: var(--color-gray-0);
     border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
 
 }
 
 .register-form label{
-    width: 100%;
-    padding: 10px;
-
+   display: block;
+   margin-bottom: 5px;
 }
 .register-form input{
     width: 100%;
@@ -234,8 +293,36 @@ ul li a:hover{
         filter: saturate(1);
     }
     .nav_menu{
+
         position: fixed;
         right: 0;
         top: 4rem;
+    }
+    
+    .nav_menu a{
+        background: var(--color-gray-300);
+        width: 15rem;
+        height: 5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-top: 1px solid var(--color-gray-400);
+
+    }
+
+    nav .nav_menu-open{
+        display: inline-block;
+    }
+
+    .main_header h1{
+        font-size: 1rem;
+        font-weight: bold;
+        margin-top: 10px;
+    }
+    main_header h2{
+        font-size: 1rem;
+        font-weight: lighter;
+        margin-top: 10px;
+
     }
 }
